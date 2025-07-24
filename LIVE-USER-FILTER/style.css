@@ -18,7 +18,8 @@ body {
   border-radius: 5px;
   box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  width: 300px;
+  width: 90%;
+  max-width: 350px;
   background: white;
 }
 
@@ -50,7 +51,8 @@ body {
 
 .header input:focus {
   outline: none;
-  background-color: rgba(255, 249, 249, 0.944);
+  background-color: white;
+  color: black;
 }
 
 .user-list {
@@ -60,6 +62,21 @@ body {
   padding: 0;
   max-height: 400px;
   overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
+}
+
+.user-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.user-list::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+.user-list::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 .user-list li {
@@ -80,10 +97,12 @@ body {
   height: 50px;
   width: 50px;
   aspect-ratio: 1/1;
+  cursor: pointer;
 }
 
 .user-list .user-info {
   margin-left: 10px;
+  cursor: pointer;
 }
 
 .user-list .user-info p {
